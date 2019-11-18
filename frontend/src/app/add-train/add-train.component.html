@@ -1,0 +1,52 @@
+<div class="container">
+        <div class="container">
+           <div class="container">
+     <form class="needs-validation" novalidate>
+             <div class="form-row">
+              
+                     <div class="form-group col-md-6">
+                             <label for="inputName">Train Name</label>
+                             <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName" required>
+                             <div class="invalid-feedback">
+                                    Please provide a name.
+                                  </div>
+                           </div>
+                           <div class="form-group" style="margin-left:50px;  width: 30%;">
+                                <label for="exampleSelect1">Train Type</label>
+                                <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="TrainType" required>
+                                  <option>Express</option>
+                                  <option>Intercity</option>
+                                  <option>Normal</option>
+                                  
+                                </select>
+                                <div class="invalid-feedback">
+                                        Please Select a type.
+                                      </div>
+                              </div>
+              
+                              <div class="form-group" style="width: 30%;">
+                                    <label for="exampleSelect2">Availabe Classes</label>
+                                    <select class="form-control" id="exampleSelect2" name="class" [(ngModel)]="Classes" required>
+                                      <option>1st/2nd/3rd</option>
+                                      <option>2nd/3rd</option>
+                                      <option>3rd</option>
+                                      
+                                    </select>
+                                    <div class="invalid-feedback">
+                                            Please Select a Class
+                                          </div>
+                                  </div>
+                 
+             
+             
+             </div>
+             <button type="submit" class="btn btn-primary" (click)="save()">Save</button>
+             <button type="button" class="btn btn-primary" style="margin-left: 20px;" routerLink="/train_details">Back</button>
+             
+           </form>
+           
+           </div>
+         </div>
+         </div>
+         
+     

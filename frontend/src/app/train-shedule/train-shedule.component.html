@@ -1,0 +1,40 @@
+
+
+<div class="container">
+        <div class="container">
+    <!--input type="text" style="border-block-width:px;" placeholder="Search here"-->
+    <button type="button" class="btn btn-info" style="margin-left: 85%; margin-bottom: 20px;" routerLink="/add_trainShedule">+ ADD NEW SHEADULE</button>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            
+            
+            <th scope="col">Date</th>
+            <th scope="col">Train Name</th>
+            <th scope="col">Start Location</th>
+            <th scope="col">End Location</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">End Time</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let trainS of trainshedule">
+            
+            
+            <td>{{trainS.Date}}</td>
+            <!--td>T-00{{TrainS.TrainNo}}</td-->
+             <td>{{trainS.TrainName}}</td>
+            <td>{{trainS.StartStation}}</td>
+            <td>{{trainS.EndStation}}</td>
+            <td>{{trainS.StartTime}}</td>
+            <td>{{trainS.EndTime}}</td>
+            <td><button type="button" class="btn btn-info" style="margin-left: 10px;"  [routerLink]="['/update_trainShedule',trainS.SheduleNo]">Edit</button>
+           <button type="button" class="btn btn-danger" style="margin-left: 10px;" (click)="deleteTrainS(trainS.SheduleNo)">Delete</button></td> 
+          </tr>
+          
+        </tbody>
+    </table>
+    </div>
+    </div>
+    <router-outlet></router-outlet>

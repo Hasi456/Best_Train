@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <div class="container">
+<!--input type="text" style="border-block-width:px;" placeholder="Search here"-->
+<button type="button" class="btn btn-info" style="margin-left: 85%; margin-bottom: 20px;" routerLink="/add_train">+ ADD NEW TRAIN</button>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        
+        <th scope="col">Train No</th>
+        <th scope="col">Train Name</th>
+        <th scope="col">Train Type</th>
+        <th scope="col">Available Classes</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let train of traindetails">
+        <th scope="row">T-00{{train.TrainNo}}</th>
+        
+        <td>{{train.TrainName}}</td>
+        <td>{{train.TrainType}}</td>
+        <td>{{train.Classes}}</td>
+        <td><button type="button" class="btn btn-info" style="margin-left: 10px;"  [routerLink]="['/edit_train',train.TrainNo]">Edit</button>
+       <button type="button" class="btn btn-danger" style="margin-left: 10px;" (click)="deleteTrain(train.TrainNo)">Delete</button></td> 
+      </tr>
+      
+    </tbody>
+</table>
+</div>
+</div>
+<router-outlet></router-outlet>

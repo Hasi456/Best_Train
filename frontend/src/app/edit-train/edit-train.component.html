@@ -1,0 +1,41 @@
+<div class ="container">
+        <div class="container" *ngFor="let train of trains">
+            <form #myForm="ngForm" (ngSubmit)="updateTrain(train.TrainName, train.TrainType, train.Classes)">
+                
+                    <div class="form-row">
+                            
+                            <div class="form-group col-md-6" >
+                                    <label for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="inputName"  placeholder="Enter Name" name="name" [(ngModel)]="train.TrainName">
+                                    <div class="form-group" style="margin-left:0px;  width: 50%;">
+                                            <label for="exampleSelect1">Train Type</label>
+                                            <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="train.TrainType">
+                                              <option>Express</option>
+                                              <option>Intercity</option>
+                                              <option>Normal</option>
+                                              
+                                            </select>
+                                          </div>
+                          
+                                          <div class="form-group" style="width: 50%;">
+                                                <label for="exampleSelect2">Availabe Classes</label>
+                                                <select class="form-control" id="exampleSelect2" name="class" [(ngModel)]="train.Classes">
+                                                  <option>1st/2nd/3rd</option>
+                                                  <option>2nd/3rd</option>
+                                                  <option>3rd</option>
+                                                  
+                                                </select>
+                                              </div>
+                             
+                         
+                    </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="margin-right: 20px;">Update</button>
+                    <button type="button" class="btn btn-primary" routerLink="/train_details">Back</button>
+                    
+                  </form>
+                
+                </div>
+                <router-outlet></router-outlet>
+        
