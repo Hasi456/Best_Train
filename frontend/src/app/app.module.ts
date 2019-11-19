@@ -16,6 +16,8 @@ import { EditTrainComponent } from './edit-train/edit-train.component';
 import { TrainSheduleComponent } from './train-shedule/train-shedule.component';
 import { UpdateTrainSheduleComponent } from './update-train-shedule/update-train-shedule.component';
 import { AddTrainSheduleComponent } from './add-train-shedule/add-train-shedule.component';
+import { RegisterComponent } from './register/register.component';
+import { HomeComponent } from './home/home.component';
 //import {FlashMessagesModule} from 'angular2-flash-messages';
 
 
@@ -31,7 +33,9 @@ import { AddTrainSheduleComponent } from './add-train-shedule/add-train-shedule.
     EditTrainComponent,
     TrainSheduleComponent,
     UpdateTrainSheduleComponent,
-    AddTrainSheduleComponent
+    AddTrainSheduleComponent,
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

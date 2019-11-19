@@ -9,7 +9,7 @@
                              <input type="text" class="form-control" id="inputName" placeholder="Enter Name" name="name" [(ngModel)]="TrainName">
                            </div-->
 
-                           <div class="form-group" style="margin-right: 70%; width: 30%;">
+                           <div class="form-group" style="margin-right: 70%; width: 30%; margin-top: 10%;">
                                 <label for="exampleSelect1">Train Name</label>
                                 <select class="form-control" id="exampleSelect1"  name="type"  [(ngModel)]="trainS.TrainName">
                                   
@@ -61,11 +61,12 @@
              
              
              </div>
-             <button type="submit" style="margin-top: 30px;" class="btn btn-primary">Update</button>
-             <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px;" routerLink="/train_shedule">Back</button>
+             <button type="submit" style="margin-top: 30px; margin-bottom: 20%;" class="btn btn-primary">Update</button>
+             <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20%;" routerLink="/train_shedule">Back</button>
              
            </form>
            </div>
          </div>
          </div>
+         
          <router-outlet></router-outlet>

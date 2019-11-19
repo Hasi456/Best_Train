@@ -3,7 +3,8 @@ import {DemoService} from '../service/demo.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-train-details',
+ selector: 'app-train-details',
+
   templateUrl: './train-details.component.html',
   styleUrls: ['./train-details.component.css'],
   providers:[DemoService]

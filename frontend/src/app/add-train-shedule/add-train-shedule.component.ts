@@ -68,6 +68,7 @@ save(){
       else{
       alert('data not inserted');
       }
+      
    });
    
 }

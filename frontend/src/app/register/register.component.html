@@ -1,0 +1,36 @@
+
+<div class="container">
+        <form>
+          <div class="form-group"><br><br>
+            <br>
+            <label for="lblusername">Username:</label>
+            <input type="text" style="width:30%" class="form-control" id="Uname" aria-describedby="emailHelp" placeholder="Enter a Username" [(ngModel)]="username" required>
+            
+          </div>
+          <div class="form-group">
+            
+            <label for="lblusername">Name:</label>
+            <input type="text" style="width:30%" class="form-control" id="Uname" aria-describedby="emailHelp" placeholder="Enter your name" [(ngModel)]="name" required>
+            
+          </div>
+          <div class="form-group">
+            
+                <label for="lblusername">Email:</label>
+                <input type="email" style="width:30%" class="form-control" id="Uname" aria-describedby="emailHelp" placeholder="Enter your email" [(ngModel)]="email" required>
+                
+              </div>
+          <div class="form-group">
+            <label for="lblpassword">Password:</label>
+            <input type="password" style="width:30%" class="form-control" id="pwd" placeholder="Enter Password" [(ngModel)]="password1" required>
+          </div>
+          <div class="form-group">
+                <label for="lblpassword">Confirm Password:</label>
+                <input type="password" style="width:30%" class="form-control" id="pwd" placeholder="Confirm Password" [(ngModel)]="password2" required>
+              </div>
+          
+          <button type="submit" class="btn btn-primary" style="margin-bottom: 20%;" >Sign Up</button>
+          
+          <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-bottom: 20%;" routerLink="/home">Back</button>
+        </form>
+        </div>
+        <router-outlet></router-outlet>

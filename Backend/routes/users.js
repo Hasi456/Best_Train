@@ -1,7 +1,30 @@
 const express=require('express');
 const router=express.Router();
 const mysql=require('mysql');
+var bcrypt = require('bcryptjs');
 const conn=require('../config/database');
+
+
+
+router.post("/register",(req,res)=>{
+
+var sql="insert into Admin SET ?";
+
+   var values={username:req.body.username, name:req.body.name, email:req.body.email, password:req.body.password};
+
+    conn.query(sql,values,function(err,result){
+       
+        if(err){
+            res.json({state:false,msg:"data not inserted!"});
+        }
+        else{
+            res.json({state:true,msg:"data inserted!"});
+        }
+       
+    });
+
+});
+
 
 router.post("/addTrain",(req,res)=>{
     //console.log(req.body);

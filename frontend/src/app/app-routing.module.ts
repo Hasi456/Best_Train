@@ -7,6 +7,7 @@ import {EditTrainComponent} from './edit-train/edit-train.component';
 import {AddTrainComponent} from './add-train/add-train.component';
 import {AddTrainSheduleComponent} from './add-train-shedule/add-train-shedule.component';
 import {UpdateTrainSheduleComponent} from './update-train-shedule/update-train-shedule.component';
+import {RegisterComponent} from './register/register.component';
  
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path :'edit_train/:id', component:EditTrainComponent},
   {path :'add_train', component:AddTrainComponent},
   {path :'add_trainShedule', component:AddTrainSheduleComponent},
-  {path :'update_trainShedule/:id', component:UpdateTrainSheduleComponent}
+  {path :'update_trainShedule/:id', component:UpdateTrainSheduleComponent},
+  {path :'register', component:RegisterComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
