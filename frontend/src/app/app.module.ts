@@ -18,6 +18,7 @@ import { UpdateTrainSheduleComponent } from './update-train-shedule/update-train
 import { AddTrainSheduleComponent } from './add-train-shedule/add-train-shedule.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import {AuthService} from './auth.service';
 //import {FlashMessagesModule} from 'angular2-flash-messages';
 
 
@@ -45,7 +46,7 @@ import { HomeComponent } from './home/home.component';
    // FlashMessagesModule
 
   ],
-  providers: [DemoService],
+  providers: [DemoService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

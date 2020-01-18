@@ -8,16 +8,22 @@ import {AddTrainComponent} from './add-train/add-train.component';
 import {AddTrainSheduleComponent} from './add-train-shedule/add-train-shedule.component';
 import {UpdateTrainSheduleComponent} from './update-train-shedule/update-train-shedule.component';
 import {RegisterComponent} from './register/register.component';
+import {HomeComponent} from './home/home.component';
+import { Authguard } from './authguard';
+import {RandomGuard} from './randomguard';
  
+
+
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'train_details', component:TrainDetailsComponent},
-  {path: 'train_shedule', component:TrainSheduleComponent},
-  {path :'edit_train/:id', component:EditTrainComponent},
-  {path :'add_train', component:AddTrainComponent},
-  {path :'add_trainShedule', component:AddTrainSheduleComponent},
-  {path :'update_trainShedule/:id', component:UpdateTrainSheduleComponent},
-  {path :'register', component:RegisterComponent}
+  {path:'login', component:LoginComponent, canActivate:[Authguard]},
+  {path:'train_details', component:TrainDetailsComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path: 'train_shedule', component:TrainSheduleComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path :'edit_train/:id', component:EditTrainComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path :'add_train', component:AddTrainComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path :'add_trainShedule', component:AddTrainSheduleComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path :'update_trainShedule/:id', component:UpdateTrainSheduleComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path :'register', component:RegisterComponent, canActivate:[RandomGuard], canLoad:[RandomGuard]},
+  {path:'', component:HomeComponent,canActivate:[RandomGuard], canLoad:[RandomGuard]}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

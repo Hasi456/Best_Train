@@ -25,8 +25,11 @@
                                 <label for="exampleSelect1">Start Station</label>
                                 <select class="form-control" id="exampleSelect1" name="type" [(ngModel)]="StartStation" required>
                                   <option>Fort</option>
-                                  <option>Galle</option>
-                                  <option>Matara</option>
+                                      <option>Galle</option>
+                                      <option>Matara</option>
+                                      <option>Kandy</option>
+                                      <option>Anuradhapura</option>
+                                      
                                   
                                 </select>
                                 <div class="invalid-feedback">Please Select a station</div>
@@ -40,6 +43,8 @@
                                       <option>Fort</option>
                                       <option>Galle</option>
                                       <option>Matara</option>
+                                      <option>Kandy</option>
+                                      <option>Anuradhapura</option>
                                       
                                     </select>
                                     <div class="invalid-feedback">Please Select a station</div>
@@ -75,7 +80,7 @@
              
              </div>
              <button type="submit" class="btn btn-primary" style=" margin-top: 30px; margin-bottom: 20%;" (click)="save()">Save</button>
-             <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20%;" routerLink="/train_details">Back</button>
+             <button type="button" class="btn btn-primary" style="margin-left: 20px; margin-top: 30px; margin-bottom: 20%;" routerLink="/train_shedule">Back</button>
              
            </form>
            </div>

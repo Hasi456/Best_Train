@@ -1,13 +1,22 @@
 body {
-  font-size: .875rem;
-background: url('https://source.unsplash.com/twukN12EN7c/1920x1080');
+  font-size:15px;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+
+
+/*background: url('https://source.unsplash.com/twukN12EN7c/1920x1080');
 /*background: url('https://source.images.app.goo.gl/Ny52UTdt6VYCBA8g7') ;*/
+  background-image: url('../assets/images/train2.jpg');
     -webkit-background-size:100%;
     -moz-background-size: 100%;
     background-size:100%;
     -o-background-size:100%;
     margin-bottom: 0%;
- 
+    background-size: cover;
+    
+    background-repeat:repeat;
+    background-position: top;
 }
 
 .feather {
@@ -22,7 +31,7 @@ background: url('https://source.unsplash.com/twukN12EN7c/1920x1080');
 
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 20px;
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
@@ -54,7 +63,7 @@ background: url('https://source.unsplash.com/twukN12EN7c/1920x1080');
 .masthead {
     height: 100vh;
     min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-image: url('../assets/images/train1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
